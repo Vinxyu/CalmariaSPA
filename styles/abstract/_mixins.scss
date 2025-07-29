@@ -1,0 +1,10 @@
+@mixin centralizar_margem($width) {
+    margin: 0 auto;
+    width: $width;
+}
+
+@mixin estilizar_texto($color, $size, $font) {
+    color: $color;
+    font-size: $size;
+    font-family: $font;
+}

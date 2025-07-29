@@ -1,0 +1,74 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+#contatos {
+    @include mixins.centralizar_margem(80%);
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    .contatos-imgs {
+        max-width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-around;
+        img {
+            width: 100%;
+            &:nth-child(n + 2) {
+                width: 47.5%;
+            }
+        }
+    }
+    .contatos-form {
+        max-width: 50%;
+        height: 816px;
+        background: variaveis.$gradiente;
+        padding: 48px;
+        border: none;
+        border-radius: 48px;
+        h4 {
+            @include mixins.estilizar_texto(variaveis.$roxo-vibrante, 2rem, variaveis.$font-Krona);
+        }
+        p {
+            @include mixins.estilizar_texto(variaveis.$roxo-escuro, 1.4rem, variaveis.$font-Montserrat);
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            margin: 1rem 0;
+            label {
+                @include mixins.estilizar_texto(variaveis.$roxo-escuro, 1rem, variaveis.$font-Montserrat);
+                font-weight: 600; 
+            }
+            input {
+                @include mixins.estilizar_texto(variaveis.$roxo-escuro, 1rem, variaveis.$font-Montserrat);
+                border: none;
+                border-radius: 32px;
+                background-color: rgba(255, 255, 255, 0.6);
+                padding: 16px;
+                text-align: left;
+            }
+            textarea {
+                @extend input;
+                resize: none
+            }
+        }
+        button {
+            @include mixins.estilizar_texto(variaveis.$branco, 1rem, variaveis.$font-Montserrat);
+            font-weight: 600;
+            background-color: variaveis.$roxo-vibrante;
+            padding: 24px;
+            text-align: center;
+            border: none;
+            border-radius: 40px;
+            width: 487px;
+            transition: .6s;
+        }
+        button:hover {
+            background-color: variaveis.$roxo-escuro;
+            transition: .6s;
+        }
+    }
+}

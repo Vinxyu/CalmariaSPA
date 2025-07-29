@@ -1,0 +1,40 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+#servico {
+    background: variaveis.$gradiente;
+    padding: 5rem 0;
+    .cards{
+        @include mixins.centralizar-margem(80%);
+        display: flex;
+        gap: 1.5rem;
+        .card {
+            background: variaveis.$gradiente-secundario;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            border: solid 3px variaveis.$branco;
+            border-radius: 32px;
+            h3 {
+                @include mixins.estilizar-texto(variaveis.$roxo-escuro, 26px, variaveis.$font-Krona);
+                font-weight: 400;
+            }
+            p {
+                @include mixins.estilizar-texto(variaveis.$roxo-escuro, 22px, variaveis.$font-Montserrat);
+                font-weight: 400;
+            }
+            transition: 0.7s;
+        }
+        .card:hover {
+            background: variaveis.$roxo-escuro;
+            h3 {
+                @include mixins.estilizar-texto(variaveis.$branco, 26px, variaveis.$font-Krona);
+                font-weight: 400;
+            }
+            p {
+                @include mixins.estilizar-texto(variaveis.$branco, 22px, variaveis.$font-Montserrat);
+                font-weight: 400;
+            }
+            transition: 0.7s;
+        }
+    }
+}
