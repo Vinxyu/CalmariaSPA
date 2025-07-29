@@ -5,7 +5,7 @@ A proposta é um SPA online fictício com navegação simples e intuitiva — in
 
 ## 🔗 Deploy
 
-👉 [vinxyu.github.io/ProjetoAluraBooks]()
+👉 [vinxyu.github.io/CalmariaSPA](https://vinxyu.github.io/CalmariaSPA/)
 
 ---
 
